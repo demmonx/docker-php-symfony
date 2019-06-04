@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+    ServerName DOMAIN
+    ServerAlias www.DOMAIN
+
+    DocumentRoot /var/www/public
+    <Directory /var/www/public>
+        AllowOverride All
+        Order Allow,Deny
+        Allow from All
+    </Directory>
+
+    ErrorLog /var/log/apache2/project_error.log
+    CustomLog /var/log/apache2/project_access.log combined
+</VirtualHost>
+
